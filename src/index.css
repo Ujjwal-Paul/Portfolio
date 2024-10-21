@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+    --bg-main: #030712;
+    --txt-color-1: #ffffff35;
+    --txt-color-1: #9d9d9d;
+    --txt-color-2: #38BDF8;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--txt-color-1);
+}
