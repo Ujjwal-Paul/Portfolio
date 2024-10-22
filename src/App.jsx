@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { TabsDemo } from "./components/TabsDemo";
 
+
 export default function App() {
   const [currentTab, setCurrentTab] = useState(null);
   const [tabHeight, setTabHeight] = useState(0);
@@ -25,6 +26,7 @@ export default function App() {
         style={{ marginTop: `${tabHeight + 100}px` }} >
 
         <p className="text-[#777] text-center">© 2025 Ujjwal Paul | This is footer</p>
+
 
       </div>
 
