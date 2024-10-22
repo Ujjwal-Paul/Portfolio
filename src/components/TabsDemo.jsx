@@ -10,7 +10,7 @@ export function TabsDemo({ setCurrentTab }) {
             title: "Home",
             value: "home",
             content: (
-                <div className="tab bg-[#030712] relative rounded-[10px] pt-[20px]     border-[1px] border-[#32363f]" >
+                <div className="tab bg-[#030712] relative rounded-[10px] p-[10px]     border-[1px] border-[#32363f]" >
                     <Home />
                 </div>
             ),
