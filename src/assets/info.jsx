@@ -3,12 +3,12 @@
 
 export const herosection = {
     "name": "Ujjwal Paul",
-    "profile_pic": "../../public/images/profile.jpg",
+    "profile_pic": "/images/profile.jpg",
     "role": "Web Developer",
     "location": "West Bengal, India",
     "sm_about": "Skilled problem-solver with 2000+ LeetCode rating, currently mastering React.js and transitioning to full-stack development with Node.js, Express.js, and MongoDB.",
     "about": "I have strong problem-solving skills and experience in competitive programming, with a 2000+ contest rating on LeetCode. Currently, I am learning React.js and building projects with it. I have a basic understanding of backend technologies (Node.js, Express.js, MongoDB) and plan to focus on full-stack development after getting comfortable with React.js.",
-    "resume": "../../public/images/resume.pdf",
+    "resume": "/images/resume.pdf",
     "social": {
         "linkedin": "https://www.linkedin.com/in/ujjwal-paul",
         "leetcode": "https://leetcode.com/u/algoujjwal",
@@ -49,7 +49,7 @@ export const projects = [
         "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
         "live_link": "https://ujjwal-paul.github.io/PATHWAY",
         "screenshots": [
-            "../../public/images/pathway-ss1.png",
+            "/images/pathway-ss1.png",
         ],
     },
 ]
@@ -65,7 +65,7 @@ export const educations = [
         "start_date": "July 2021",
         "end_date": "Present",
         "gpa": "8.91",
-        "logo": "../../public/images/ciem-logo.jpg",
+        "logo": "/images/ciem-logo.jpg",
     },
     {
         "id": 2,
@@ -75,7 +75,7 @@ export const educations = [
         "start_date": "2018",
         "end_date": "2020",
         "gpa": "90.8%",
-        "logo": "../../public/images/edu-default.png",
+        "logo": "/images/edu-default.png",
     },
     {
         "id": 3,
@@ -85,7 +85,7 @@ export const educations = [
         "start_date": "2012",
         "end_date": "2018",
         "gpa": "75.28%",
-        "logo": "../../public/images/edu-default.png",
+        "logo": "/images/edu-default.png",
     },
 ]
 
