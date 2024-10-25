@@ -7,15 +7,6 @@ import Projects from "./Projects";
 export function TabsDemo({ setCurrentTab }) {
     const tabs = [
         {
-            title: "Contact",
-            value: "contact",
-            content: (
-                <div className="tab bg-[#030712] relative rounded-[10px] p-[10px] border-[1px] border-[#32363f]" >
-                    <Contact />
-                </div>
-            ),
-        },
-        {
             title: "Home",
             value: "home",
             content: (
@@ -42,15 +33,15 @@ export function TabsDemo({ setCurrentTab }) {
                 </div>
             ),
         },
-        // {
-        //     title: "Contact",
-        //     value: "contact",
-        //     content: (
-        //         <div className="tab bg-[#030712] relative rounded-[10px] p-[10px] border-[1px] border-[#32363f]" >
-        //             <Contact />
-        //         </div>
-        //     ),
-        // },
+        {
+            title: "Contact",
+            value: "contact",
+            content: (
+                <div className="tab bg-[#030712] relative rounded-[10px] p-[10px] border-[1px] border-[#32363f]" >
+                    <Contact />
+                </div>
+            ),
+        },
     ];
 
     return (
