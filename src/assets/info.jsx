@@ -1,12 +1,12 @@
 
 
-
 export const herosection = {
     "name": "Ujjwal Paul",
     "profile_pic": "/images/profile.jpg",
     "role": "Web Developer",
-    "location": "West Bengal, India",
+    "location": "Kolkata, India",
     "sm_about": "Skilled problem-solver with 2000+ LeetCode rating, currently mastering React.js and transitioning to full-stack development with Node.js, Express.js, and MongoDB.",
+    
     "about": "I have strong problem-solving skills and experience in competitive programming, with a 2000+ contest rating on LeetCode. Currently, I am learning React.js and building projects with it. I have a basic understanding of backend technologies (Node.js, Express.js, MongoDB) and plan to focus on full-stack development after getting comfortable with React.js.",
     "resume": "/images/resume.pdf",
     "social": {

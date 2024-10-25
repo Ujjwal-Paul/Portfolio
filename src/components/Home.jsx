@@ -5,10 +5,6 @@ import { LuLinkedin } from "react-icons/lu";
 import { SiLeetcode } from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
-import { MdOutlineMailOutline } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
-
-
 import { FiYoutube } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 
@@ -49,7 +45,7 @@ export default function Home() {
                         <motion.span
                             initial={{ rotate: 0 }}
                             animate={{ rotate: [0, -25, 20, -15, 10, 0] }}
-                            transition={{ duration: 1, delay: 1.3 }}
+                            transition={{ duration: 1, delay: 2 }}
                             style={{ display: "inline-block", transformOrigin: "bottom" }}
                         >
                             👋
@@ -63,6 +59,9 @@ export default function Home() {
 
                         className="mt-3 text-[#ddd]"
                         style={{ fontSize: "min(5vw, 1rem)" }}>
+                        {"I'm " + herosection.name + " from " + herosection.location + "."}
+                        <br></br>
+                        
                         {herosection.sm_about}
                     </motion.p>
 
@@ -79,35 +78,35 @@ export default function Home() {
                             <TbFileDownload className="inline-block ml-3 scale-150" />
                         </motion.a>
 
-                        <div className="flex flex-1 bg-[none] text-[24px] mb-4">
+                        <div className="flex flex-1 max-w-[225px] justify-between text-[24px] mb-4">
                             <motion.a
                                 {...applyAnimation(1)}
                                 href={herosection.social.linkedin} target="_blank"
-                                className="flex items-center mr-[16px]" >
+                                className="flex items-center mr-[9px]" >
                                 <LuLinkedin className="hover:text-white" />
                             </motion.a>
                             <motion.a
                                 {...applyAnimation(1.1)}
                                 href={herosection.social.leetcode} target="_blank"
-                                className="flex items-center mr-[16px]" >
+                                className="flex items-center mr-[9px]" >
                                 <SiLeetcode className="hover:text-white" />
                             </motion.a>
                             <motion.a
                                 {...applyAnimation(1.2)}
                                 href={herosection.social.github} target="_blank"
-                                className="flex items-center mr-[16px]" >
+                                className="flex items-center mr-[9px]" >
                                 <FiGithub className="hover:text-white" />
                             </motion.a>
                             <motion.a
                                 {...applyAnimation(1.3)}
                                 href={herosection.social.email} target="_blank"
-                                className="flex items-center mr-[16px] " >
+                                className="flex items-center mr-[9px] " >
                                 <MdOutlineMail className="hover:text-white" />
                             </motion.a>
                             <motion.a
                                 {...applyAnimation(1.4)}
                                 href={herosection.social.youtube} target="_blank"
-                                className="flex items-center mr-[16px]" >
+                                className="flex items-center mr-[9px]" >
                                 <FiYoutube className="hover:text-white" />
                             </motion.a>
                             <motion.a
@@ -135,7 +134,9 @@ export default function Home() {
             </div>
 
 
-            
+            <div className="bg-[#32363f] mt-10 text-[#ddd]">
+                Education
+            </div>
 
 
 
