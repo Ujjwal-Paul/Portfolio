@@ -7,11 +7,13 @@ import { FiGithub } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import { FiYoutube } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
 
-import { herosection } from "../assets/info";
+import { herosection, projects } from "../assets/info";
+import Project from "./Project";
 
 
-export default function Home() {
+export default function Home({ buttonRefs }) {
     function applyAnimation(delay = 0) {
         return {
             initial: { x: 50, opacity: 0 },
@@ -20,8 +22,17 @@ export default function Home() {
         }
     }
 
+    function applyAnimationUpside(delay = 0) {
+        return {
+            initial: { y: 50, opacity: 0 },
+            animate: { y: 0, opacity: 1 },
+            transition: { duration: 0.3, delay },
+        }
+    }
+
     return (
         <div>
+            {/* Hero Section */}
             <div className="flex justify-between">
                 <div className="md:w-[450px]">
                     <motion.img
@@ -41,7 +52,7 @@ export default function Home() {
 
                         className="font-[Calistoga] font-[400] text-white leading-none text-left bg-[none] sm:mt-[10px]"
                         style={{ fontSize: "min(11vw, 48px)" }} >
-                        hi ujjwal here
+                        hi Ujjwal here
                         <motion.span
                             initial={{ rotate: 0 }}
                             animate={{ rotate: [0, -25, 20, -15, 10, 0] }}
@@ -61,7 +72,7 @@ export default function Home() {
                         style={{ fontSize: "min(5vw, 1rem)" }}>
                         {"I'm " + herosection.name + " from " + herosection.location + "."}
                         <br></br>
-                        
+
                         {herosection.sm_about}
                     </motion.p>
 
@@ -133,7 +144,31 @@ export default function Home() {
                 </motion.div>
             </div>
 
+            {/* Projects Section */}
+            <motion.h1
+                {...applyAnimationUpside(1.2)}
+                className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
+                style={{ fontSize: "min(8vw, 36px)" }} >
+                featured projects
 
+                <button
+                    className="font-sans font-[100] ml-5 text-[#aaa] flex items-center hover:text-white bg-[none]"
+                    style={{ fontSize: "min(5vw, 16px)" }}
+                    onClick={() => buttonRefs.current[1].click()} >
+                    View more
+                    <FaArrowRight className="ml-2 mt-[2px]" />
+                </button>
+
+            </motion.h1>
+
+            <div
+                className="flex flex-col sm:flex-row flex-wrap justify-between" >
+                {projects.slice(0, 2).map((proj, ind) => <Project key={proj.id} element={proj} delayTime={1.4 + (ind * 0.3)} />)}
+            </div>
+
+
+
+            {/* Education Section */}
             <div className="bg-[#32363f] mt-10 text-[#ddd]">
                 Education
             </div>

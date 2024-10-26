@@ -23,25 +23,97 @@ export const herosection = {
 
 export const projects = [
     // template 
+    // {
+    //     "id": 1,
+    //     "name": "Effort Meter",
+    //     "description": "A website that tracks daily work hours and task completion.",
+    //     "technologies": ["React", "Node.js", "MongoDB", "Express"],
+    //     "features": [
+    //         "Task listing and completion tracking",
+    //         "Percentage of time worked calculated",
+    //         "Customizable website name"
+    //     ],
+        // "github_link": "https://github.com/username/effort-meter", // must
+        // "live_link": "https://effortmeter.com", // must
+    //     "screenshots": [
+    //         "https://example.com/screenshot1.png",
+    //         "https://example.com/screenshot2.png"
+    //     ],
+    // },
     {
-        "id": 1,
-        "name": "Effort Meter",
-        "description": "A website that tracks daily work hours and task completion.",
-        "technologies": ["React", "Node.js", "MongoDB", "Express"],
-        "features": [
-            "Task listing and completion tracking",
-            "Percentage of time worked calculated",
-            "Customizable website name"
-        ],
-        "github_link": "https://github.com/username/effort-meter",
-        "live_link": "https://effortmeter.com",
+        "id": 2,
+        "name": "PATHWAY - Pathfinding Visualizer",
+        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [],
+        "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
+        "live_link": "https://ujjwal-paul.github.io/PATHWAY",
         "screenshots": [
-            "https://example.com/screenshot1.png",
-            "https://example.com/screenshot2.png"
+            "/images/pathway-ss1.png",
         ],
     },
     {
-        "id": 2,
+        "id": 3,
+        "name": "PATHWAY - Pathfinding Visualizer",
+        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [],
+        "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
+        "live_link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+    },
+    {
+        "id": 4,
+        "name": "PATHWAY - Pathfinding Visualizer",
+        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [],
+        "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
+        "live_link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+    },
+    {
+        "id": 5,
+        "name": "PATHWAY - Pathfinding Visualizer",
+        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [],
+        "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
+        "live_link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+    },
+    {
+        "id": 6,
+        "name": "PATHWAY - Pathfinding Visualizer",
+        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [],
+        "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
+        "live_link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+    },
+    {
+        "id": 7,
+        "name": "PATHWAY - Pathfinding Visualizer",
+        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
+        "technologies": ["HTML", "CSS", "JavaScript", "Node js", "Tailwind", "Aceternity UI", "Framer Motion", "React JS"],
+        "features": [],
+        "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
+        "live_link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+    },
+    {
+        "id": 8,
         "name": "PATHWAY - Pathfinding Visualizer",
         "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
         "technologies": ["HTML", "CSS", "JavaScript"],

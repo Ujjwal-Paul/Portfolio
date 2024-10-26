@@ -2,9 +2,18 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "./utils";
 
+import Achievements from "../components/Achievements";
+import Contact from "../components/Contact";
+import Home from "../components/Home";
+import Projects from "../components/Projects";
+
+
 export const Tabs = ({ tabs: propTabs, setCurrentTab }) => {
   const [active, setActive] = useState(propTabs[0]);
   const [tabs, setTabs] = useState(propTabs);
+  const [hovering, setHovering] = useState(false);
+
+  const buttonRefs = useRef([]);
 
   const moveSelectedTabToTop = (idx) => {
     const newTabs = [...propTabs];
@@ -13,8 +22,6 @@ export const Tabs = ({ tabs: propTabs, setCurrentTab }) => {
     setTabs(newTabs);
     setActive(newTabs[0]);
   };
-
-  const [hovering, setHovering] = useState(false);
 
   return (<>
     <div
@@ -27,6 +34,7 @@ export const Tabs = ({ tabs: propTabs, setCurrentTab }) => {
       {propTabs.map((tab, idx) => (
         <button
           key={tab.title}
+          ref={(el) => (buttonRefs.current[idx] = el)}
           onClick={() => {
             moveSelectedTabToTop(idx);
           }}
@@ -58,6 +66,7 @@ export const Tabs = ({ tabs: propTabs, setCurrentTab }) => {
       hovering={hovering}
       className="mt-[3rem]"
       setCurrentTab={setCurrentTab}
+      buttonRefs={buttonRefs}
     />
   </>);
 };
@@ -66,10 +75,19 @@ export const FadeInDiv = ({
   className,
   tabs,
   hovering,
-  setCurrentTab
+  setCurrentTab,
+  buttonRefs
 }) => {
   const activeTab = useRef(null);
 
+  function getTabComponent(tab) {
+    switch (tab) {
+      case 'home': return <Home buttonRefs={buttonRefs} />
+      case 'projects': return <Projects />
+      case 'achievements': return <Achievements />
+      case 'contact': return <Contact />
+    }
+  }
 
   const isActive = (tab) => {
     return tab.value === tabs[0].value;
@@ -100,10 +118,16 @@ export const FadeInDiv = ({
           className={cn("w-full h-full absolute top-0 left-0", className)}>
 
           {isActive(tab) ?
-            tab.content :
+            <>
+              <div className="tab bg-[#030712] relative rounded-[10px] p-[10px] border-[1px] border-[#32363f]" >
+                {
+                  getTabComponent(tab.value)
+                }
+              </div>
+            </>
+            :
             <div className="bg-[#32363f] h-[100px] rounded-[10px] border-[1px] border-[#666]"></div>
           }
-
         </motion.div>
       ))}
     </div>)
