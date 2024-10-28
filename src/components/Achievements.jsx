@@ -1,4 +1,8 @@
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+
+import { achievements } from "../assets/info";
+import Achievement from "./Achievement";
+
 
 export default function Achievements() {
     function applyAnimation(delay = 0) {
@@ -14,10 +18,14 @@ export default function Achievements() {
             <motion.h1
                 {...applyAnimation(0.6)}
                 className="font-[Calistoga] font-[400] text-white leading-none text-left bg-[none] sm:mt-[10px] mb-7"
-                style={{ fontSize: "min(11vw, 48px)" }} >
+                style={{ fontSize: "min(10vw, 48px)" }} >
                 my achievements.
             </motion.h1>
-            
+
+            <div
+                className="flex flex-col sm:flex-row flex-wrap justify-between" >
+                {achievements.map((el, ind) => <Achievement key={el.id} element={el} delayTime={0.8 + (ind * 0.2)} />)}
+            </div>
 
         </div>
     )

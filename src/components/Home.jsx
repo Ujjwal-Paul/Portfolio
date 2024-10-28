@@ -9,8 +9,9 @@ import { FiYoutube } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 
-import { herosection, projects } from "../assets/info";
+import { achievements, herosection, projects } from "../assets/info";
 import Project from "./Project";
+import Achievement from "./Achievement";
 
 
 export default function Home({ buttonRefs }) {
@@ -158,7 +159,6 @@ export default function Home({ buttonRefs }) {
                     View more
                     <FaArrowRight className="ml-2 mt-[2px]" />
                 </button>
-
             </motion.h1>
 
             <div
@@ -166,6 +166,26 @@ export default function Home({ buttonRefs }) {
                 {projects.slice(0, 2).map((proj, ind) => <Project key={proj.id} element={proj} delayTime={1.4 + (ind * 0.3)} />)}
             </div>
 
+            {/* Achievement Section */}
+            <motion.h1
+                {...applyAnimationUpside(1.9)}
+                className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
+                style={{ fontSize: "min(8vw, 36px)" }} >
+                featured achievements
+
+                <button
+                    className="font-sans font-[100] ml-5 text-[#aaa] flex items-center hover:text-white bg-[none]"
+                    style={{ fontSize: "min(5vw, 16px)" }}
+                    onClick={() => buttonRefs.current[2].click()} >
+                    View more
+                    <FaArrowRight className="ml-2 mt-[2px]" />
+                </button>
+            </motion.h1>
+
+            <div
+                className="flex flex-col sm:flex-row flex-wrap justify-between" >
+                {achievements.slice(0, 2).map((el, ind) => <Achievement key={el.id} element={el} delayTime={1.9 + (ind * 0.3)} />)}
+            </div>
 
 
             {/* Education Section */}

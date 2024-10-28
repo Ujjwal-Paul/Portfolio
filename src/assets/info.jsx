@@ -6,7 +6,7 @@ export const herosection = {
     "role": "Web Developer",
     "location": "Kolkata, India",
     "sm_about": "Skilled problem-solver with 2000+ LeetCode rating, currently mastering React.js and transitioning to full-stack development with Node.js, Express.js, and MongoDB.",
-    
+
     "about": "I have strong problem-solving skills and experience in competitive programming, with a 2000+ contest rating on LeetCode. Currently, I am learning React.js and building projects with it. I have a basic understanding of backend technologies (Node.js, Express.js, MongoDB) and plan to focus on full-stack development after getting comfortable with React.js.",
     "resume": "/images/resume.pdf",
     "social": {
@@ -33,8 +33,8 @@ export const projects = [
     //         "Percentage of time worked calculated",
     //         "Customizable website name"
     //     ],
-        // "github_link": "https://github.com/username/effort-meter", // must
-        // "live_link": "https://effortmeter.com", // must
+    // "github_link": "https://github.com/username/effort-meter", // must
+    // "live_link": "https://effortmeter.com", // must
     //     "screenshots": [
     //         "https://example.com/screenshot1.png",
     //         "https://example.com/screenshot2.png"
@@ -67,7 +67,7 @@ export const projects = [
     {
         "id": 4,
         "name": "PATHWAY - Pathfinding Visualizer",
-        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
+        "description": "A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed. A website to visualize pathfinding algorithms with options to set start/end points, obstacles, and control the speed.",
         "technologies": ["HTML", "CSS", "JavaScript"],
         "features": [],
         "github_link": "https://github.com/Ujjwal-Paul/PATHWAY",
@@ -164,15 +164,118 @@ export const educations = [
 
 
 export const achievements = [
+    // template
+    // {
+    //     "id": 1,
+    //     "title": "Achievement Title",
+    //     "description": "A brief description of the achievement.",
+    //     "date": "YYYY-MM",    // optional
+    //     "organization": "Name of the organization or institution that granted the achievement",
+    //     "category": "Type of achievement (e.g., Award, Certification, Competition, Project)",
+    //     "link": "https://example.com",
+    //     "screenshots": [
+    //         "",
+    //     ],
+    //     "keywords": [   // optional
+    //         "LeetCode", "Competition", "Coding",
+    //     ],
+    // },
     {
+        "id": 1,
         "title": "Achievement Title",
-        "description": "A brief description of the achievement.",
-        "date": "YYYY-MM",
-        "organization": "Name of the organization or institution that granted the achievement",
-        "category": "Type of achievement (e.g., Award, Certification, Competition, Project)",
-        "link": "https://example.com",
+        "description": "Developed a pathfinding visualizer with multiple algorithms, customizable settings, and speed controls. Allows users to set start and end points.",
+        "date": "20.08.2024",
+        "category": "Award",
+        "link": "https://ujjwal-paul.github.io/PATHWAY",
         "screenshots": [
-            "",
+            "/images/pathway-ss1.png",
+        ],
+        "keywords": [
+            "Hackathon", "SIH", "Coding", "LeetCode", "Competition", "Volunteer",
+        ],
+    },
+    {
+        "id": 2,
+        "title": "Achievement Title",
+        "description": "Developed a pathfinding visualizer with multiple algorithms, customizable settings, and speed controls. Allows users to set start and end points.",
+        "date": "20.08.2024",
+        "category": "Award",
+        "link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+        "keywords": [
+            "Hackathon", "SIH", "Coding", "LeetCode", "Competition", "Volunteer",
+        ],
+    },
+    {
+        "id": 3,
+        "title": "Achievement Title",
+        "description": "Developed a pathfinding visualizer with multiple algorithms, customizable settings, and speed controls. Allows users to set start and end points.",
+        "date": "20.08.2024",
+        "category": "Award",
+        "link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+        "keywords": [
+            "Hackathon", "SIH", "Coding", "LeetCode", "Competition", "Volunteer",
+        ],
+    },
+    {
+        "id": 4,
+        "title": "Achievement Title",
+        "description": "Developed a pathfinding visualizer with multiple algorithms, customizable settings, and speed controls. Allows users to set start and end points.",
+        "date": "20.08.2024",
+        "category": "Award",
+        "link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+        "keywords": [
+            "Hackathon", "SIH", "Coding", "LeetCode", "Competition", "Volunteer",
+        ],
+    },
+    {
+        "id": 5,
+        "title": "Achievement Title",
+        "description": "Developed a pathfinding visualizer with multiple algorithms, customizable settings, and speed controls. Allows users to set start and end points.",
+        "date": "20.08.2024",
+        "category": "Award",
+        "link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+        "keywords": [
+            "Hackathon", "SIH", "Coding", "LeetCode", "Competition", "Volunteer",
+        ],
+    },
+    {
+        "id": 6,
+        "title": "Achievement Title",
+        "description": "Developed a pathfinding visualizer with multiple algorithms, customizable settings, and speed controls. Allows users to set start and end points.",
+        "date": "20.08.2024",
+        "category": "Award",
+        "link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+        "keywords": [
+            "Hackathon", "SIH", "Coding", "LeetCode", "Competition", "Volunteer",
+        ],
+    },
+    {
+        "id": 7,
+        "title": "Achievement Title",
+        "description": "Developed a pathfinding visualizer with multiple algorithms, customizable settings, and speed controls. Allows users to set start and end points.",
+        "date": "20.08.2024",
+        "category": "Award",
+        "link": "https://ujjwal-paul.github.io/PATHWAY",
+        "screenshots": [
+            "/images/pathway-ss1.png",
+        ],
+        "keywords": [
+            "Hackathon", "SIH", "Coding", "LeetCode", "Competition", "Volunteer",
         ],
     },
 ]
