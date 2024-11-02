@@ -12,6 +12,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { achievements, herosection, projects } from "../assets/info";
 import Project from "./Project";
 import Achievement from "./Achievement";
+import Skills from "./Skills";
 
 
 export default function Home({ buttonRefs }) {
@@ -187,11 +188,24 @@ export default function Home({ buttonRefs }) {
                 {achievements.slice(0, 2).map((el, ind) => <Achievement key={el.id} element={el} delayTime={1.9 + (ind * 0.3)} />)}
             </div>
 
+            {/* Skills Section */}
+            <Skills />
+
+
+
+
+
+
 
             {/* Education Section */}
-            <div className="bg-[#32363f] mt-10 text-[#ddd]">
-                Education
-            </div>
+            <motion.h1
+                {...applyAnimationUpside(1.9)}
+                className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
+                style={{ fontSize: "min(8vw, 36px)" }} >
+                my education
+            </motion.h1>
+
+
 
 
 

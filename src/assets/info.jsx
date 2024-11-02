@@ -126,6 +126,35 @@ export const projects = [
     },
 ]
 
+export const skills = [
+    {
+        "id": 1,
+        "name": "HTML",
+        "image": "/images/react-icon.png",
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "image": "/images/react-icon.png",
+    },
+    {
+        "id": 3,
+        "name": "JavaScript",
+        "image": "/images/react-icon.png",
+    },
+    {
+        "id": 4,
+        "name": "Tailwind CSS",
+        "image": "/images/react-icon.png",
+    },
+    {
+        "id": 5,
+        "name": "React",
+        "image": "/images/react-icon.png",
+    },
+
+];
+
 
 // Complete
 export const educations = [
