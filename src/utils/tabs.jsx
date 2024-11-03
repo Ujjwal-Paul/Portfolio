@@ -1,14 +1,13 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { cn } from "./utils";
 
+import { cn } from "./utils";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
 import Home from "../components/Home";
 import Projects from "../components/Projects";
 
-
-export const Tabs = ({ tabs: propTabs, setCurrentTab }) => {
+export const Tabs = ({ tabs: propTabs }) => {
   const [active, setActive] = useState(propTabs[0]);
   const [tabs, setTabs] = useState(propTabs);
   const [hovering, setHovering] = useState(false);
@@ -26,11 +25,7 @@ export const Tabs = ({ tabs: propTabs, setCurrentTab }) => {
   return (<>
     <div
       className="bg-[#ffffff30] flex flex-row items-center justify-center relative text-dynamic w-fit mx-auto rounded-full border-[1px] border-[#777] backdrop-blur-2xl"
-
-      style={{
-        padding: "8px min(4vw, 10px)",
-      }}
-    >
+      style={{ padding: "8px min(4vw, 10px)" }}>
       {propTabs.map((tab, idx) => (
         <button
           key={tab.title}
@@ -65,7 +60,6 @@ export const Tabs = ({ tabs: propTabs, setCurrentTab }) => {
       key={active.value}
       hovering={hovering}
       className="mt-[3rem]"
-      setCurrentTab={setCurrentTab}
       buttonRefs={buttonRefs}
     />
   </>);
@@ -75,11 +69,8 @@ export const FadeInDiv = ({
   className,
   tabs,
   hovering,
-  setCurrentTab,
   buttonRefs
 }) => {
-  const activeTab = useRef(null);
-
   function getTabComponent(tab) {
     switch (tab) {
       case 'home': return <Home buttonRefs={buttonRefs} />
@@ -93,19 +84,12 @@ export const FadeInDiv = ({
     return tab.value === tabs[0].value;
   };
 
-  useEffect(() => {
-    if (activeTab.current) {
-      setCurrentTab(activeTab.current);
-    }
-  }, [activeTab, setCurrentTab])
-
   return (
     (<div className="relative w-full h-full">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
           layoutId={tab.value}
-          ref={isActive(tab) ? activeTab : null}
           style={{
             scale: 1 - idx * 0.1,
             top: hovering ? idx * -10 : 0,

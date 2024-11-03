@@ -165,7 +165,6 @@ export const educations = [
         "degree": "B.Tech. - Computer Science & Engineering",
         "start_date": "July 2021",
         "end_date": "Present",
-        "gpa": "8.91",
         "logo": "/images/ciem-logo.jpg",
     },
     {
@@ -175,7 +174,6 @@ export const educations = [
         "degree": "Higher Secondary Education, Science",
         "start_date": "2018",
         "end_date": "2020",
-        "gpa": "90.8%",
         "logo": "/images/edu-default.png",
     },
     {
@@ -185,7 +183,6 @@ export const educations = [
         "degree": "Secondary Education",
         "start_date": "2012",
         "end_date": "2018",
-        "gpa": "75.28%",
         "logo": "/images/edu-default.png",
     },
 ]

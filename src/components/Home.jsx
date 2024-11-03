@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { TbFileDownload } from "react-icons/tb";
 import { LuLinkedin } from "react-icons/lu";
 import { SiLeetcode } from "react-icons/si";
@@ -13,22 +13,20 @@ import { achievements, herosection, projects } from "../assets/info";
 import Project from "./Project";
 import Achievement from "./Achievement";
 import Skills from "./Skills";
-
+import Education from "./Education";
+import Footer from "./Footer";
 
 export default function Home({ buttonRefs }) {
+    const refProject = useRef(null);
+    const refAchievement = useRef(null);
+    const isInViewProject = useInView(refProject, { once: true });
+    const isInViewAchievement = useInView(refAchievement, { once: true });
+
     function applyAnimation(delay = 0) {
         return {
             initial: { x: 50, opacity: 0 },
             animate: { x: 0, opacity: 1 },
             transition: { duration: 0.2, delay },
-        }
-    }
-
-    function applyAnimationUpside(delay = 0) {
-        return {
-            initial: { y: 50, opacity: 0 },
-            animate: { y: 0, opacity: 1 },
-            transition: { duration: 0.3, delay },
         }
     }
 
@@ -52,7 +50,7 @@ export default function Home({ buttonRefs }) {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
 
-                        className="font-[Calistoga] font-[400] text-white leading-none text-left bg-[none] sm:mt-[10px]"
+                        className="font-[Calistoga] font-[400] text-white leading-none text-left sm:mt-[10px]"
                         style={{ fontSize: "min(11vw, 48px)" }} >
                         hi Ujjwal here
                         <motion.span
@@ -136,81 +134,71 @@ export default function Home({ buttonRefs }) {
                     initial={{ x: 30, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.3, delay: 0.8 }}
-
                     className="hidden md:block content-center">
-                    <img
-                        className="rounded-lg"
-                        src={herosection.profile_pic}
-                        style={{ height: "min(90vw, 200px)" }}
-                    />
+                    <img className="rounded-lg" src={herosection.profile_pic} style={{ height: "min(90vw, 200px)" }}></img>
                 </motion.div>
             </div>
 
             {/* Projects Section */}
-            <motion.h1
-                {...applyAnimationUpside(1.2)}
-                className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
-                style={{ fontSize: "min(8vw, 36px)" }} >
-                featured projects
+            <div ref={refProject}>
+                <motion.h1
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={isInViewProject ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+                    transition={{ duration: 0.3, delay: 0.3 }}
+                    className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
+                    style={{ fontSize: "min(8vw, 36px)" }} >
+                    featured projects
 
-                <button
-                    className="font-sans font-[100] ml-5 text-[#aaa] flex items-center hover:text-white bg-[none]"
-                    style={{ fontSize: "min(5vw, 16px)" }}
-                    onClick={() => buttonRefs.current[1].click()} >
-                    View more
-                    <FaArrowRight className="ml-2 mt-[2px]" />
-                </button>
-            </motion.h1>
+                    <button
+                        className="font-sans font-[100] ml-5 text-[#aaa] flex items-center hover:text-white"
+                        style={{ fontSize: "min(5vw, 16px)" }}
+                        onClick={() => buttonRefs.current[1].click()} >
+                        View more
+                        <FaArrowRight className="ml-2 mt-[2px]" />
+                    </button>
+                </motion.h1>
 
-            <div
-                className="flex flex-col sm:flex-row flex-wrap justify-between" >
-                {projects.slice(0, 2).map((proj, ind) => <Project key={proj.id} element={proj} delayTime={1.4 + (ind * 0.3)} />)}
+                <div
+                    className="flex flex-col sm:flex-row flex-wrap justify-between" >
+                    {projects.slice(0, 2).map((proj, ind) => <Project key={proj.id} element={proj} isInView={isInViewProject} delayTime={0.5 + (ind * 0.3)} />)}
+                </div>
             </div>
 
             {/* Achievement Section */}
-            <motion.h1
-                {...applyAnimationUpside(1.9)}
-                className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
-                style={{ fontSize: "min(8vw, 36px)" }} >
-                featured achievements
+            <div ref={refAchievement}>
+                <motion.h1
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={isInViewAchievement ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+                    transition={{ duration: 0.3, delay: 0.3 }}
+                    className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
+                    style={{ fontSize: "min(8vw, 36px)" }} >
+                    featured achievements
 
-                <button
-                    className="font-sans font-[100] ml-5 text-[#aaa] flex items-center hover:text-white bg-[none]"
-                    style={{ fontSize: "min(5vw, 16px)" }}
-                    onClick={() => buttonRefs.current[2].click()} >
-                    View more
-                    <FaArrowRight className="ml-2 mt-[2px]" />
-                </button>
-            </motion.h1>
+                    <button
+                        className="font-sans font-[100] ml-5 text-[#aaa] flex items-center hover:text-white"
+                        style={{ fontSize: "min(5vw, 16px)" }}
+                        onClick={() => buttonRefs.current[2].click()} >
+                        View more
+                        <FaArrowRight className="ml-2 mt-[2px]" />
+                    </button>
+                </motion.h1>
 
-            <div
-                className="flex flex-col sm:flex-row flex-wrap justify-between" >
-                {achievements.slice(0, 2).map((el, ind) => <Achievement key={el.id} element={el} delayTime={1.9 + (ind * 0.3)} />)}
+                <div
+                    className="flex flex-col sm:flex-row flex-wrap justify-between" >
+                    {achievements.slice(0, 2).map((el, ind) => <Achievement key={el.id} element={el} isInView={isInViewAchievement} delayTime={0.5 + (ind * 0.3)} />)}
+                </div>
             </div>
 
             {/* Skills Section */}
             <Skills />
 
-
-
-
-
-
-
             {/* Education Section */}
-            <motion.h1
-                {...applyAnimationUpside(1.9)}
-                className="font-[Calistoga] font-[400] text-white leading-none text-left my-7 flex justify-between"
-                style={{ fontSize: "min(8vw, 36px)" }} >
-                my education
-            </motion.h1>
+            <Education />
 
-
-
-
-
+            {/* Footer Section */}
+            <Footer />
 
         </div >
-    )
+    );
 }
 

@@ -1,5 +1,5 @@
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 import { skills } from "../assets/info";
 
@@ -28,7 +28,7 @@ export default function Skills() {
                 {skills.map((el, ind) => <Skill key={el.id} image={el.image} name={el.name} isInView={isInView} delay={0.5 + ind * 0.2} />)}
             </div>
         </div>
-    )
+    );
 }
 
 function Skill({ image, name, delay, isInView }) {
@@ -39,5 +39,5 @@ function Skill({ image, name, delay, isInView }) {
             <img src={image} className="h-[25vw] max-h-[100px] mb-2"></img>
             <p>{name}</p>
         </motion.div>
-    )
+    );
 }

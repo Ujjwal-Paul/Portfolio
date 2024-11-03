@@ -5,7 +5,7 @@ import { IoMdSend } from "react-icons/io";
 import { FaHourglassEnd } from "react-icons/fa";
 
 import { WEB3FORMS_ACCESS_KEY } from '../assets/info';
-
+import Footer from './Footer';
 
 export default function Contact() {
     const [clicked, setClicked] = useState(false);
@@ -65,7 +65,7 @@ export default function Contact() {
         <div>
             <motion.h1
                 {...applyAnimation(0.6)}
-                className="font-[Calistoga] font-[400] text-white leading-none text-left bg-[none] sm:mt-[10px] mb-7"
+                className="font-[Calistoga] font-[400] text-white leading-none text-left sm:mt-[10px] mb-7"
                 style={{ fontSize: "min(11vw, 48px)" }} >
                 contact me.
             </motion.h1>
@@ -118,6 +118,9 @@ export default function Contact() {
                     }
                 </motion.button>
             </form>
+
+            <Footer />
+
         </div>
-    )
+    );
 }

@@ -1,7 +1,6 @@
 import { Tabs } from "../utils/tabs";
 
-
-export function TabsDemo({ setCurrentTab }) {
+export function TabsDemo() {
     const tabs = [
         {
             title: "Home",
@@ -22,8 +21,8 @@ export function TabsDemo({ setCurrentTab }) {
     ];
 
     return (
-        (<div className="bg-[none] relative mt-5 ">
-            <Tabs tabs={tabs} setCurrentTab={setCurrentTab} />
+        (<div className="relative mt-5 ">
+            <Tabs tabs={tabs} />
         </div>)
     );
 }
