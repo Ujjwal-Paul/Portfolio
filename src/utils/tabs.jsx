@@ -44,7 +44,7 @@ export const Tabs = ({ tabs: propTabs }) => {
             <motion.div
               layoutId="clickedbutton"
               transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-              className="absolute inset-0 rounded-full dark:bg-[#0096c7]" />
+              className="absolute inset-0 rounded-full dark:bg-[#0096c7]"/>
           )}
 
           <span className="relative block text-black dark:text-white">
@@ -103,7 +103,7 @@ export const FadeInDiv = ({
 
           {isActive(tab) ?
             <>
-              <div className="tab bg-[#030712] relative rounded-[10px] p-[10px] border-[1px] border-[#32363f]" >
+              <div className="tab bg-[#030712] relative rounded-[10px] p-[10px] border-[1px] border-[#32363f] overflow-x-hidden" >
                 {
                   getTabComponent(tab.value)
                 }
