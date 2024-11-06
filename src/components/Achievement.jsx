@@ -8,8 +8,8 @@ export default function Achievement({ element, isInView, delayTime }) {
             animate={isInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
             transition={{ duration: 0.3, delay: delayTime }}
             className={`p-5 border-[1px] border-[#32363f] rounded-xl flex-1 sm:flex-none sm:w-[49%] mb-4 flex flex-col`} >
-            <a href={element.link} target="_blank">
-                <img src={element.screenshots[0]} className="rounded-sm mb-2 mt-2"></img>
+            <a href={element.link} target="_blank" className="flex justify-center">
+                <img src={element.screenshots[0]} className="rounded-sm mb-2 mt-2 border-[1px] border-[#666] max-h-[200px] object-cover object-center"></img>
             </a>
 
             <h2 className="text-[#eee] font-[600]" style={{ fontSize: "min(6.5vw, 24px)" }}>

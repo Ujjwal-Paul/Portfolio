@@ -9,13 +9,24 @@ export default function Project({ element, isInView, delayTime }) {
             animate={isInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
             transition={{ duration: 0.3, delay: delayTime }}
             className={`p-5 border-[1px] border-[#32363f] rounded-xl flex-1 sm:flex-none sm:w-[49%] mb-4 flex flex-col`} >
-            <a href={element.live_link} target="_blank">
-                <img src={element.screenshots[0]} className="rounded-sm mb-5 mt-2"></img>
+            <a href={element.live_link} target="_blank" className="flex justify-center">
+                <img src={element.screenshots[0]} className="rounded-sm mb-5 mt-2 border-[1px] border-[#666]"></img>
             </a>
 
-            <h2 className="text-[#eee] font-[600]">{element.name}</h2>
+            <h2 className="text-[#eee] font-[600]" style={{ fontSize: "min(6.5vw, 24px)" }}>
+                {element.name}
+            </h2>
 
             <p>{element.description}</p>
+
+            {
+                (element.features.length > 0) &&
+                <ul className="list-disc pl-4">
+                    {
+                        element.features.map((el, ind) => <li key={ind}>{el}</li>)
+                    }
+                </ul>
+            }
 
             <div className="flex flex-wrap mt-6 mb-4">
                 {element.technologies.map((el, ind) => <Technology key={ind} name={el} />)}

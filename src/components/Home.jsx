@@ -52,7 +52,7 @@ export default function Home({ buttonRefs }) {
 
                         className="font-[Calistoga] font-[400] text-white leading-none text-left sm:mt-[10px]"
                         style={{ fontSize: "min(11vw, 48px)" }} >
-                        hi Ujjwal here
+                        hi ujjwal here
                         <motion.span
                             initial={{ rotate: 0 }}
                             animate={{ rotate: [0, -25, 20, -15, 10, 0] }}
@@ -73,7 +73,7 @@ export default function Home({ buttonRefs }) {
                         {"I'm " + herosection.name + " from " + herosection.location + "."}
                         <br></br>
 
-                        {herosection.sm_about}
+                        {herosection.about}
                     </motion.p>
 
                     <div className="mt-6 flex flex-wrap">
