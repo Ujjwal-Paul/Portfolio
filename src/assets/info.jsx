@@ -146,30 +146,39 @@ export const achievements = [
 export const skills = [
     {
         "id": 1,
-        "name": "HTML",
-        "image": "/images/react-icon.png",
+        "name": "C",
+        "image": "/images/icon-c.svg",
     },
     {
         "id": 2,
-        "name": "CSS",
-        "image": "/images/react-icon.png",
+        "name": "C++",
+        "image": "/images/icon-cpp.svg",
     },
     {
         "id": 3,
-        "name": "JavaScript",
-        "image": "/images/react-icon.png",
+        "name": "HTML",
+        "image": "/images/icon-html.svg",
     },
     {
         "id": 4,
-        "name": "Tailwind CSS",
-        "image": "/images/react-icon.png",
+        "name": "CSS",
+        "image": "/images/icon-css.svg",
     },
     {
         "id": 5,
-        "name": "React",
-        "image": "/images/react-icon.png",
+        "name": "JavaScript",
+        "image": "/images/icon-javascript.svg",
     },
-
+    {
+        "id": 6,
+        "name": "React",
+        "image": "/images/icon-react.svg",
+    },
+    {
+        "id": 7,
+        "name": "Tailwind CSS",
+        "image": "/images/icon-tailwind.svg",
+    },
 ];
 
 export const educations = [
