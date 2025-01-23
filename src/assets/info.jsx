@@ -141,6 +141,20 @@ export const achievements = [
             "Competitive Programming", "Problem Solving", "Data Structures", "Algorithms", "2000+ Rating"
         ],
     },
+    {
+        "id": 4,
+        "title": "Achieved 75+ WPM Typing Speed",
+        "description": "Maintained a typing speed of 75+ WPM with good precision on MonkeyType.",
+        "date": "January 2025",
+        "category": "Achievement",
+        "link": "https://monkeytype.com/profile/ITS_UJJWAL",
+        "screenshots": [
+            "/images/ss-monkeytype.png",
+        ],
+        "keywords": [
+            "75+ WPM", "Typing Speed", "Typing Accuracy", "MonkeyType", "Typing Challenge"
+        ],
+    },
 ];
 
 export const skills = [
